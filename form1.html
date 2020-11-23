@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>from1</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formStyle.css">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- form Content -->
+    <section class="wrapper">
+        <div class="formContainer">
+            <main>
+                <form action="submit">
+                    <h2>Academic History</h2>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <input type="radio" checked name="academicHistory" id="yesDegree">
+                        <label for="yesDegree" class="text radioBTN">I have completed my degree</label><br>
+                        <input type="radio" name="academicHistory" id="noDegree">
+                        <label for="noDegree" class="text radioBTN">I have not completed my degree.</label>
+                        <div id="noDegreeTrue" class="conditional">
+                            <p class="text">If no, When do you expect to compete your program (YYYY,MM)?</p>
+                            <input type="text" name="date" id="completDGdate" placeholder="2021 04">
+                        </div>
+                    </fieldset>
+                    <p class="text fieldTitle">Have you applied to York previously?</p>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <input type="radio" checked name="yorkStudent" id="yesDegree">
+                        <label for="yes" class="text radioBTN">Yes</label><br>
+                        <div id="yesTrue" class="conditional">
+                            <p class="text">York Student ID# *</p>
+                            <input type="text" name="studentNumb" id="studentNumb" placeholder="">
+                        </div><br>
+                        <input type="radio" name="yorkStudent" id="no">
+                        <label for="yes" class="text radioBTN">No</label>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2 textSpace">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Country*</label>
+                            <select required >
+                                <option value="canada">Canada</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Type of Degree *</label>
+                            <input required type="text" placeholder="Degree">
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program Length *</label>
+                            <select required>
+                                <option value="2y">2 Years</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Major Area of Study *</label>
+                            <input required type="text" placeholder="EDU">
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program Start Date *</label>
+                            <select required>
+                                <option value="2018">2018</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program End Date *</label>
+                            <select required>
+                                <option value="2021">2021</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">City</label>
+                            <input type="text" placeholder="Toronto">
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Completion Status*</label>
+                            <input required type="text" placeholder="Complete">
+                        </div>
+                    </fieldset>
+
+                    <!-- upload section -->
+                    <fieldset class="col2">
+                        <p class="text fieldText">Required Attachments *</p>
+                        <p class="text">
+                        Exchange transcript, grading scales, degree certificate and other certifications,
+                        and include a link to the <a class="fieldTextLink" href="">
+                            video 
+                            <span class="info-popUp">
+                                <span class="popUp-arrow"></span>
+                                <span class="popUp">
+                                
+                                        Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut ex ea commodo consequat
+                                
+                                </span>
+                        </span>
+                        </a> or <a class="fieldTextLink" href="">text explainer
+                            <span class="info-popUp">
+                                <span class="popUp-arrow"></span>
+                                <span class="popUp">
+                            
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut ex ea commodo consequat
+                            
+                                </span>
+                            </span>
+                        </a> - please ensure the document are translated to english.</p>
+                        <button class="btn btnStyle1 upload"><i class="fas fa-file"></i> Upload File(s)</button>
+                    </fieldset>
+                    <fieldset>
+                        <p class="text fieldText textSpace">Link to video</p>
+                        <textarea name="" id=""  rows="1"></textarea>
+                        <p class="text fieldText textSpace">Text Explainer</p>
+                        <textarea name="" id="" rows="3"></textarea>
+                    </fieldset>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <input type="radio" checked name="yorkStudent" id="yesDegree">
+                        <label for="yes" class="text radioBTN">Yes</label><br>
+                        <div id="yesTrue" class="conditional">
+                            <p class="text">York Student ID# *</p>
+                            <input type="text" name="studentNumb" id="studentNumb" placeholder="">
+                        </div><br>
+                        <input type="radio" name="yorkStudent" id="no">
+                        <label for="yes" class="text radioBTN">No</label>
+                    </fieldset>
+                    <!-- upload section -->
+                    <fieldset class="col2">
+                        <div class="textSpace">
+                        <p class="text fieldText textSpace">Upload a copy of your degree certificate here. *</p>
+                        <button class="btn btnStyle1 textSpace upload"><i class="fas fa-file"></i> Upload File(s)</button>
+                    </div>
+                    </fieldset>
+
+                </form>
+            </main>
+        </div>
+ 
+    </section>
+</body>
+</html>

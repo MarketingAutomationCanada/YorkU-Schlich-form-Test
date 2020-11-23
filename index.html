@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>York U</title>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="formStyle.css">
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container flex-row-spaceBetween">
+            <div class="logo">
+                <img src="/assets/SchulichYork_Digital_Horiz_FINAL.png" alt="Schulich York">
+            </div>
+            <div class="pageTitle">Schulich Application Portal</div>
+        </div>
+        <!-- nav -->
+        <nav >
+            <div class="container flex-row-spaceBetween">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#">Application</a></li>
+                    <li><a href="#">Application Resources</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <a href="#">username <i class="fas fa-sort-down"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- form Content -->
+    <section class="wrapper">
+        <!-- form title / current page name -->
+        <div class="formHeader">
+            <h1>Schulich Application Form - Academic History</h1>
+        </div>
+        <div class="formContainer">
+            <!-- form info -->
+            <div class="formInfo">
+                <div class="flex-row-spaceBetween">
+                    <div class="status">
+                        <p>Total Application Completed: <span>50%</span></p>
+                        <p>Estimated Time to Complete this Section: <span>10min</span></p>
+                    </div>
+                    <div class="formMainNav">
+                        <nav class="mainNav">
+                            <ul class="flex-row-spaceBetween">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="active" ><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">11</a></li>
+                            </ul>
+                        </nav>
+                        <div class="savProgContainer">
+                            <input type="checkbox" name="saveProgress" id="saveProgress">
+                            <label for="saveProgress" class="text">Save my progress and resume later | Resume a previously saved form</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="note text">
+                    <h2>Note</h2>
+                    <p>We recommend you select “Save my progress and resume later” often, to ensure that all the data you
+                        have entered is saved
+                        (this may take a few moments).<br>
+                        You can only have <a href="#">one active application</a> at a time, therefore you will be returned
+                        to your existing application in the
+                        next window by clicking on “Resume a previously saved form”.</p>
+                </div>
+                <div class="formSubNav">
+                    <ul class="subNav">
+                        <li class="subNavItem">
+                            <p>1</p>
+                            <p>Personal Info</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>2</p>
+                            <p>Citizenship</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>3</p>
+                            <p>Program Info</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>4</p>
+                            <p>Academic History</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>5</p>
+                            <p>Resume</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>6</p>
+                            <p>Employment & References</p>
+                        </li>
+                        
+                        <li class="subNavItem">
+                            <p>7</p>
+                            <p>Language Proficiency</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>8</p>
+                            <p>Essays</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>9</p>
+                            <p>Declaration</p>
+                        </li>
+                        <li class="subNavItem">
+                            <p>10</p>
+                            <p>Payment Info</p>
+                        </li>
+                        <li class="subNavItem subNavItemLastOf">
+                            <p>11</p>
+                            <p>Submit</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <main>
+                <!-- form goes here -->
+                <form action="submit">
+                    <h2>Academic History</h2>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <input type="radio" checked name="academicHistory" id="yesDegree">
+                        <label for="yesDegree" class="text radioBTN">I have completed my degree</label><br>
+                        <input type="radio" name="academicHistory" id="noDegree">
+                        <label for="noDegree" class="text radioBTN">I have not completed my degree.</label>
+                        <div id="noDegreeTrue" class="conditional">
+                            <p class="text">If no, When do you expect to compete your program (YYYY,MM)?</p>
+                            <input type="text" name="date" id="completDGdate" placeholder="2021 04">
+                        </div>
+                    </fieldset>
+                    <p class="text fieldTitle">Have you applied to York previously?</p>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <input type="radio" checked name="yorkStudent" id="yes">
+                        <label for="yes" class="text radioBTN">Yes</label><br>
+                        <div class="conditional" id="yesTrue" >
+                            <p class="text">York Student ID# *</p>
+                            <input type="text" name="studentNumb" id="studentNumb" placeholder="">
+                        </div><br>
+                        <input type="radio" name="yorkStudent" id="no">
+                        <label for="no" class="text radioBTN">No</label>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2 textSpace">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Country*</label>
+                            <select required>
+                                <option value="canada">Canada</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Type of Degree *</label>
+                            <input required type="text" placeholder="Degree">
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program Length *</label>
+                            <select required>
+                                <option value="2y">2 Years</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Major Area of Study *</label>
+                            <input required type="text" placeholder="EDU">
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program Start Date *</label>
+                            <select required>
+                                <option value="2018">2018</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Program End Date *</label>
+                            <select required>
+                                <option value="2021">2021</option>
+                            </select>
+                            <div class="arrowDown">
+                                <img src="/assets/down.svg" alt="">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!-- text fields -->
+                    <fieldset class="col2">
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">City</label>
+                            <input type="text" placeholder="Toronto">
+                        </div>
+                        <div class="fieldRow">
+                            <label class="text fieldTitle" for="">Completion Status*</label>
+                            <input required type="text" placeholder="Complete">
+                        </div>
+                    </fieldset>
+                
+                    <!-- upload section -->
+                    <fieldset class="col2">
+                        <p class="text fieldText">Required Attachments *</p>
+                        <p class="text">
+                            Exchange transcript, grading scales, degree certificate and other certifications,
+                            and include a link to the <a class="fieldTextLink" href="">
+                                video
+                                <span class="info-popUp">
+                                    <span class="popUp-arrow"></span>
+                                    <span class="popUp">
+                
+                                        Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut ex ea commodo consequat
+                
+                                    </span>
+                                </span>
+                            </a> or <a class="fieldTextLink" href="">text explainer
+                                <span class="info-popUp">
+                                    <span class="popUp-arrow"></span>
+                                    <span class="popUp">
+                
+                                        Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut ex ea commodo consequat
+                
+                                    </span>
+                                </span>
+                            </a> - please ensure the document are translated to english.</p>
+                        <button class="btn btnStyle1 upload"><i class="fas fa-file"></i> Upload File(s)</button>
+                    </fieldset>
+                    <fieldset>
+                        <p class="text fieldText textSpace">Link to video</p>
+                        <textarea name="" id="videoLink" rows="1"></textarea>
+                        <p class="text fieldText textSpace">Text Explainer</p>
+                        <textarea name="" id="textExplaner" rows="3"></textarea>
+                    </fieldset>
+                    <!-- radioList -->
+                    <fieldset class="radioFieldset">
+                        <p class="text fieldText textSpace">
+                            Do you have any additional professional qualifications?
+                        </p>
+                        <input type="radio" checked name="yorkStudent" id="yesq">
+                        <label for="yesq" class="text radioBTN">Yes</label><br>
+                        <div class="conditional"id="yesTrueq" >
+                            <input type="text" name="qualifications" id="qualifications" placeholder="Please list additional professional qualifications…">
+                        </div><br>
+                        <input type="radio" name="yorkStudent" id="noq">
+                        <label for="noq" class="text radioBTN">No</label>
+                    </fieldset>
+                    <!-- upload section -->
+                    <fieldset class="col2">
+                        <div class="textSpace">
+                            <p class="text fieldText textSpace">Upload a copy of your degree certificate here. *</p>
+                            <button class="btn btnStyle1 textSpace upload"><i class="fas fa-file"></i> Upload File(s)</button>
+                        </div>
+                    </fieldset>
+                
+                </form>
+            </main>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="footerNav flex-row-spaceBetween">
+                <div class="prevNext">
+                    <button class="btn btnStyle1"><i class="fas fa-angle-left"></i> Previous</button>
+                    <button class="btn btnStyle2">Continue <i class="fas fa-angle-right"></i></button>
+                </div>
+                <div class="saveBtn">
+                    <button class="btn btnStyle3">Save Progress</button>
+                </div>
+            </div>
+           
+            <div class="copyRight">
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.</p>
+                <p class="text">© Copyright 2020 The Schulich School of Business, York University.</p>
+            </div>
+
+        </footer>
+    </section>
+    <script>
+
+        const condition1no = document.getElementById('noDegree');
+         const condition1yes = document.getElementById('yesDegree');
+         condition1yes.addEventListener('click', function () {
+                if (this.checked === true) {
+                    console.log('hi')
+                    const condition1 = document.getElementById('noDegreeTrue')
+                    condition1.style.display = "none"
+                }
+            })
+
+        condition1no.addEventListener('click', function(){
+             if (this.checked === true) {
+                console.log('hi')
+                const condition1 = document.getElementById('noDegreeTrue')
+                condition1.style.display =" block"
+            }
+        })
+
+         const condition2no = document.getElementById('no');
+         const condition2yes = document.getElementById('yes');
+
+            condition2yes.addEventListener('click', function () {
+                if (this.checked === true) {
+                    console.log('hi')
+                    const condition2 = document.getElementById('yesTrue')
+                    condition2.style.display = "block"
+                }
+            })
+
+            condition2no.addEventListener('click', function () {
+                if (this.checked === true) {
+                    console.log('hi')
+                    const condition2 = document.getElementById('yesTrue')
+                    condition2.style.display = "none"
+                }
+            })
+
+             const condition3no = document.getElementById('noq');
+                const condition3yes = document.getElementById('yesq');
+
+                condition3yes.addEventListener('click', function () {
+                    if (this.checked === true) {
+                        console.log('hi')
+                        const condition3 = document.getElementById('yesTrueq')
+                        condition3.style.display = "block"
+                    }
+                })
+
+                condition3no.addEventListener('click', function () {
+                    if (this.checked === true) {
+                        console.log('hi')
+                        const condition3 = document.getElementById('yesTrueq')
+                        condition3.style.display = "none"
+                    }
+                })
+       
+    </script>
+</body>
+
+</html>

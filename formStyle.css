@@ -1,0 +1,151 @@
+:root{
+    --darkBlue: #1E5772;
+    --midBlue: #376986;
+    --lightBlue: #90ACC0;
+    --textColDark: #1A1A1A;
+    --textColLight: #ffffff;
+    --headerTextCol: #1E5772;
+    --borderCol: #E3E3E3;
+}
+
+/* input */
+input, select, textarea{
+    border: 1px solid var(--darkBlue);
+    border-radius: 3px;
+    padding:15px;
+    margin-bottom: 20px;
+    resize: none;
+
+}
+textarea{
+    width: 100%;
+    margin: 10px 0px 20px 0px
+}
+
+fieldset{
+    border: 0px;
+    padding: 0px;
+    max-width: 720px;
+}
+
+.fieldText{
+    color: var(--darkBlue);
+    margin: 0px;;
+}
+
+.textSpace{
+    margin-top: 15px;
+}
+
+fieldset .text a{
+    color: var(--darkBlue);
+    text-decoration: underline;
+    position: relative;
+}
+
+.conditional{
+    display: none;
+    margin-left: 20px;
+} 
+
+
+/* radio */
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--darkBlue);
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+input[type="radio" i]:checked{
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--darkBlue);
+    background-color: var(--darkBlue);
+    appearance: none;
+    border-radius: 100%;
+}
+
+.fieldTitle{
+    color: var(--darkBlue);
+}
+
+
+/* 2col */
+.col2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fieldRow{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.fieldRow:first-child{
+    margin-right: 20px;
+}
+
+input[type="text"], select{
+    margin-top: 10px;
+    width: 100%;
+    min-width: 350px;
+    max-width: 350px;
+}
+
+select{
+    appearance: none;
+    position: relative;
+}
+
+.arrowDown{
+    position: absolute;
+    bottom: 35px;
+    right:10px;
+    width: 15px;
+}
+
+/* upload */
+.upload{
+    font-weight: 700;
+    font-size: 16px;
+}
+/* pop up */
+.info-popUp{
+    display: none;
+    position: absolute;
+}
+
+a:hover > .info-popUp{
+    display: flex;
+    top: 100%;
+    right: 0;
+}
+
+.popUp{
+    position: absolute;
+    background: var(--darkBlue);
+    width: 300px;
+    padding: 10px;
+    color: var(--textColLight);
+    font-weight: 100;
+    top: 100%;
+    right: 0px;
+    z-index: 9999;
+    margin-top: 10px
+}
+.popUp-arrow{
+    content: '';
+    width: 20px;
+    height: 20px;
+    z-index: 9;
+    transform: rotate(45deg);
+    top: 100%;
+    right: 5px;
+    margin-top: 5px;
+    position: absolute;
+    background: var(--darkBlue);
+}
